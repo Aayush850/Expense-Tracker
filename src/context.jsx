@@ -151,17 +151,26 @@ const AppProvider = ({ children }) => {
           amount: "",
         });
         setIsEdit(false);
-        toast.success("Transaction edited");
+        toast.success("Transaction edited", {
+          position: "bottom-right",
+          autoClose: 3000,
+        });
         return;
       }
       await addDoc(transactionsRef, newTransaction);
-      toast.success(`${newTransaction.type} added`);
+      toast.success(`${newTransaction.type} added`, {
+        position: "bottom-right",
+        autoClose: 3000,
+      });
       setTransactionInput({
         label: "",
         amount: "",
       });
     } catch (error) {
-      toast.error("An error occured!");
+      toast.error("An error occured!", {
+        position: "bottom-right",
+        autoClose: 3000,
+      });
     }
   };
 
@@ -175,7 +184,10 @@ const AppProvider = ({ children }) => {
     try {
       const transactionDoc = doc(db, "transactions", id);
       await deleteDoc(transactionDoc);
-      toast.success("Transaction deleted");
+      toast.success("Transaction deleted", {
+        position: "bottom-right",
+        autoClose: 3000,
+      });
     } catch (error) {
       console.log(error);
     }
