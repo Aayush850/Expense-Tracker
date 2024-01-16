@@ -144,6 +144,9 @@ p {
 .sidebar-items {
   margin-top: 128px;
 }
+.sidebar-item {
+  margin: 0 1rem;
+}
 .sidebar-link {
   color: #000;
   font-size: 1.8rem;
@@ -332,6 +335,21 @@ input {
   }
 }
 
+@media (max-width: 800px) {
+  .sidebar {
+    width: 50%;
+  }
+  .transaction {
+    width: 95%;
+  }
+  .form-container {
+    width: 80%;
+  }
+  .modal {
+    width: 80%;
+  }
+}
+
 @media (max-width: 600px) {
   .sidebar {
     width: 100%;
@@ -345,15 +363,7 @@ input {
   .info-card {
     width: 90%;
   }
-  .form-container {
-    width: 80%;
-  }
-  .modal {
-    width: 80%;
-  }
-  .transaction {
-    width: 95%;
-  }
+
   .nav-container {
     padding: 1rem;
   }
@@ -386,5 +396,3 @@ input {
     text-align: center;
   }
 }
-
-/* CSS */

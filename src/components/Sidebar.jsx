@@ -7,18 +7,19 @@ import { useGlobalContext } from "../context";
 import { Link } from "react-router-dom";
 
 const Sidebar = () => {
-  const { isSidebarOpen, setIsSidebarOpen, resetTransactionInput } =
+  const { isSidebarOpen, setIsSidebarOpen, resetTransactionInput, setIsEdit } =
     useGlobalContext();
   return (
     <div className={isSidebarOpen ? "sidebar" : "sidebar hide-sidebar"}>
       <IoCloseSharp className="close" onClick={() => setIsSidebarOpen(false)} />
       <ul className="sidebar-items">
-        <li className="siderbar-item">
+        <li className="sidebar-item">
           <Link
             to="/"
             onClick={() => {
               resetTransactionInput();
               setIsSidebarOpen(false);
+              setIsEdit(false);
             }}
             className="sidebar-link"
           >
@@ -26,12 +27,13 @@ const Sidebar = () => {
             Home
           </Link>
         </li>
-        <li className="siderbar-item">
+        <li className="sidebar-item">
           <Link
             to="/addIncome"
             onClick={() => {
               resetTransactionInput();
               setIsSidebarOpen(false);
+              setIsEdit(false);
             }}
             className="sidebar-link"
           >
@@ -41,12 +43,13 @@ const Sidebar = () => {
             Add Income
           </Link>
         </li>
-        <li className="siderbar-item">
+        <li className="sidebar-item">
           <Link
             to="/addExpense"
             onClick={() => {
               resetTransactionInput();
               setIsSidebarOpen(false);
+              setIsEdit(false);
             }}
             className="sidebar-link"
           >

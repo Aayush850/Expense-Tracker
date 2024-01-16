@@ -24,7 +24,7 @@ const Home = () => {
           </p>
         </div>
         <div className="info-card">
-          <h3>Income/Budget</h3>
+          <h3>Income</h3>
           <p className=" amount">${totalIncome}</p>
         </div>
         <div className="info-card">

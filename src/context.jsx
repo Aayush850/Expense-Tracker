@@ -130,7 +130,10 @@ const AppProvider = ({ children }) => {
   const addTransaction = async (e) => {
     e.preventDefault();
 
-    if (transactionInput.label === "" || transactionInput.amount === "") {
+    if (
+      transactionInput.label.trim() === "" ||
+      transactionInput.amount.trim() === ""
+    ) {
       alert("Invalid entries! Make sure the label and amount is not empty");
       return;
     }
