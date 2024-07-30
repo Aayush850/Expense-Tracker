@@ -16,6 +16,7 @@ import {
   where,
 } from "firebase/firestore";
 import { toast } from "react-toastify";
+
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
